@@ -1,0 +1,45 @@
+<html>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<!-- jQuery library -->
+
+
+<head>
+    <title> Customer Management </title>
+    <!-- <link rel="stylesheet" type="text/css" href="../../bootstrap.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+
+<body>
+        
+ <!--We will be adding the navbar here. This is the code Steve Colt wrote duing tutorial and is not taken directly from bootstrap options-->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <div class="navbar header">
+            <a class="navbar-brand" href="/">#Food</a>
+            <!--The below code will add collapsing feature into the app-->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <% if(!currentUser){ %>
+                        <li>
+                            <a href="/login">Login</a>
+                        </li>
+                        <li>
+                            <a href="/register">Sign Up</a>
+                        </li>
+                        <% }else{ %>
+                            <li>
+                                <a href="#"> Welcome
+                                    <%= currentUser.username %>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/logout">Log Out</a>
+                            </li>
+                    <%}%>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</nav>

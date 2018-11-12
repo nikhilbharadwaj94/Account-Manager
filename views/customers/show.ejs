@@ -1,0 +1,19 @@
+<% include ../partials/header %>
+
+<!-- Add custom code below -->
+
+<a href="/customers/view" class="btn btn-lg"><strong>BACK!!</strong></a><h1><center>View Complete details of <%=customer.name %></center></h1>
+<center><p>name--<%=customer.name %></p></center>
+<center><p>Mobile number--<%=customer.mobile_no %></p></center>
+<center><p>We are providing breakfast at--<%=customer.breakfast_cost %></p></center>
+<center><p>We are providing lunch at--<%=customer.lunch_cost %></p></center>
+
+<h3><%= customer.name %>'s orders recently are:-</h3>
+<% customer.orders.forEach(function(order){ %>
+    <div><center><div><%= order.created.toDateString() %></div>
+            <strong>Breakfast taken - <%= order.breakfast_number %></strong>
+            <strong>Lunch taken - <%= order.lunch_number %></strong>
+        </center>
+    </div>
+<% }); %>
+

@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+
+<!-- Add custom code below -->
+<!-- I will be doing all the calculations here and then just send the final value -->
+<%var net= totalIncome-totalExpense; %>
+<a href="/income" class="btn btn-lg"><strong>Go to Income page</strong></a><a href="/expense" class="btn btn-lg nav navbar-nav navbar-right"><strong>Go to Expense page</strong></a><h1><center>The cashflow status is as follows</center></h1>
+<h2><center>Current net is <strong><%= net %></strong></center></h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2><center><strong>Income Status</strong></center></h2>
+            <h2 style="color: rgb(53, 136, 57)"><center><%= totalIncome %></center></h2>
+            <% income.forEach(function(income){ %>
+                <h4 style="color: rgb(53, 136, 57)"><center><%=income.category %> - <%=income.amount %></center></h4>
+            <% }); %>
+        </div>
+        <div class="col-md-6">
+                <h2><center><strong>Expense Status</strong></center></h2>
+                <h2 style="color: rgb(182, 16, 16)"><center><%= totalExpense %></center></h2>
+                <% expense.forEach(function(expense){ %>
+                    <h4 style="color: rgb(182, 16, 16)"><center><%=expense.category %> - <%=expense.amount %></center></h4>
+                <% }); %>
+            </div>
+    </div>
+</div>

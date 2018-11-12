@@ -1,0 +1,18 @@
+<% include ../partials/header %>
+
+<!--ADD CUSTOM CODE HERE-->
+<div class="container">
+        <a href="/customers" class="btn btn-lg"><strong>BACK!!</strong></a> <h1><center><strong>Add New Customer Details Here!!</strong></center></h1>
+        <h1><center><strong>Since we customize the cost based on requirement i am adding fields to include cost as well</strong></center></h1>
+        <div style="margin: 10px 10px; width : 30%">
+        <form action="/customers" method="POST">
+            <input type="text" class="form-control" name="customer_name" placeholder="Enter name" style="margin: 10px 10px">
+            <input type="text" class="form-control" name="mobile_no" placeholder="Mobile Number" style="margin: 10px 10px">
+            <input type="number" class="form-control" name="breakfast_cost" placeholder="breakfast cost" style="margin: 10px 10px">
+            <input type="number" class="form-control" name="breakfast_default" placeholder="No. of breakfast" style="margin: 10px 10px">
+            <input type="number" class="form-control" name="lunch_cost" placeholder="lunch cost" style="margin: 10px 10px">
+            <input type="number" class="form-control" name="lunch_default" placeholder="No. of lunch" style="margin: 10px 10px">
+            <button class="btn btn-lg" style="margin: 10px 10px">Create</button>
+        </form>
+        </div>
+        </div>

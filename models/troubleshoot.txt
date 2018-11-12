@@ -1,0 +1,7 @@
+>>When i created the customer table i was able to inset only 1 record
+when i tried to insert another record i was getting the error-
+errmsg: 'E11000 duplicate key error collection: DBManager.customers index: username_1 dup key: { : null }',
+
+When i searched online i found that the problem was with the passport-local-mongoose plugin.
+when i commented the plugin line it worked normally for me. How can i overcome the problem without commenting
+that statement?
